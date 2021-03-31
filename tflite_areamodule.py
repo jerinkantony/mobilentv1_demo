@@ -137,8 +137,10 @@ def test_models(test_path,tf_path,tflite_model_quant,tflite_path):
 
     print("TFLite Model")
     acc_matrics(tflite_y_true,tflite_y_pred,dataset_labels)
-    print("TF Model")
-    acc_matrics(tf_y_true,tf_y_pred,dataset_labels)
+    # print("TF Model")
+    # acc_matrics(tf_y_true,tf_y_pred,dataset_labels)
+    print("TFLite_Int8_quantized Model")
+    acc_matrics(tflitequantised_y_true,tflitequantised_y_pred,dataset_labels)
 
 if __name__ == '__main__':
 

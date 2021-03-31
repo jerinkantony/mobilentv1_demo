@@ -16,7 +16,7 @@ if __name__=="__main__":
 		if 1: # 0/1 training
 			for i in range(1):
 				CNN_Classifier = getDeepNNClass('CNNCategorical')
-				if 0: # 0/1 training
+				if 1: # 0/1 training
 					classifier_obj = CNN_Classifier(dbname=dbname)
 					#classifier_obj.pretrain()
 					classifier_obj.train_model(epochs = 30)
