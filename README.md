@@ -1,6 +1,6 @@
 # mobilentv1_demo
 
-```git clone https://github.com/jerinkantony/mobilentv1_demo -b dev_Athira --single-branch --depth=1```
+```git clone https://github.com/jerinkantony/mobilentv1_demo --depth=1```
 
 # A. Training
 
