@@ -1,0 +1,134 @@
+{
+  "augment_type": {
+    "value": "sample_opencv_aug",
+    "help": "Type of Augmentation",
+    "choices": "simple_albumentaion, strong_albumentaion, sample_opencv_aug"
+  },
+  "inp_dim": {
+    "value": [
+      128,
+      128,
+      3
+    ],
+    "help": "Input Dimension",
+    "choices": null
+  },
+  "drop_outs": {
+    "value": [
+      0.1
+    ],
+    "help": "list of dropout layers, except last layer",
+    "choices": "null, [0.1],[0.1,0.1]"
+  },
+  "num_unfreeze": {
+    "value": 5,
+    "help": "number of layers to freeze",
+    "choices": "5,6,7"
+  },
+  "dbname": {
+    "value": "japanese_NPR_purpose_class",
+    "help": "name of db",
+    "choices": "plate, gear"
+  },
+  "num_outnodes": {
+    "value": 28,
+    "help": "Total number of nodes in the final Dense Layer",
+    "choices": null
+  },
+  "datagenerator": {
+    "value": "IMAGEGENERATOR",
+    "help": "Generator Type",
+    "choices": "IMAGEGENERATOR_Binary, REGIMAGEGENERATOR, LSTMGENERATOR, IMAGEGENERATOR"
+  },
+  "pooling_layer": {
+    "value": "GlobalAvgPool",
+    "help": "Specify Pooling Layer",
+    "choices": "GlobalAvgPool, GlobalMaxPool, Flatten"
+  },
+  "load_prev_weights": {
+    "value": true,
+    "help": "Train from scratch/Continue training Mode",
+    "choices": "true, false"
+  },
+  "FC_LAYERS": {
+    "value": [
+      16
+    ],
+    "help": "list of fully connected layers, except last layer",
+    "choices": "null, [16],[16,32]"
+  },
+  "transfer_weights": {
+    "value": null,
+    "help": "Name of h5 file to copy from",
+    "choices": "null, model.h5, mobilenet.h5"
+  },
+  "verify_data": {
+    "value": false,
+    "help": "Enable/Disable imshow",
+    "choices": "true, false"
+  },
+  "class_mode": {
+    "value": "categorical",
+    "help": "Statistical Data Type",
+    "choices": "regression, categorical, binary"
+  },
+  "batch_size": {
+    "value": 16,
+    "help": "Batch Size",
+    "choices": null
+  },
+  "freeze": {
+    "value": false,
+    "help": "true for freezing , false for unfreezing",
+    "choices": "true,false"
+  },
+  "modelfilename": {
+    "value": "MobileNet.h5",
+    "help": "Name of h5 file",
+    "choices": null
+  },
+  "model": {
+    "value": "MobileNet",
+    "help": "Available Network Models",
+    "choices": "MobileNet, MobileNetv2,ResNet18, customcnn,RX_model_digit, regressioncnn, customLSTM, attire_model..."
+  },
+  "show_plot": {
+    "value": false,
+    "help": "Enable/Disable training plot",
+    "choices": "true, false"
+  },
+  "classes": {
+    "value": [
+      "13",
+      "2",
+      "20",
+      "7",
+      "1",
+      "17",
+      "10",
+      "25",
+      "12",
+      "18",
+      "21",
+      "5",
+      "4",
+      "24",
+      "23",
+      "16",
+      "15",
+      "22",
+      "19",
+      "3",
+      "8",
+      "9",
+      "14",
+      "6",
+      "11",
+      "26",
+      "27",
+      "28"
+    ],
+    "help": "Class List",
+    "choices": null
+  }
+}

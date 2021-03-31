@@ -1,0 +1,124 @@
+{
+  "datagenerator": {
+    "value": "IMAGEGENERATOR",
+    "help": "Generator Type",
+    "choices": "IMAGEGENERATOR_Binary, REGIMAGEGENERATOR, LSTMGENERATOR, IMAGEGENERATOR"
+  },
+  "classes": {
+    "value": [
+      "2",
+      "7",
+      "00",
+      "1",
+      "90",
+      "0",
+      "5",
+      "4",
+      "3",
+      "8",
+      "9",
+      "6",
+     "13",
+      "18",
+      "22",
+      "23",
+       "33",
+      "100"
+    ],
+    "help": "Class List",
+    "choices": null
+  },
+  "pooling_layer": {
+    "value": "GlobalAvgPool",
+    "help": "Specify Pooling Layer",
+    "choices": "GlobalAvgPool, GlobalMaxPool, Flatten"
+  },
+  "num_outnodes": {
+    "value": 18,
+    "help": "Total number of nodes in the final Dense Layer",
+    "choices": null
+  },
+  "model": {
+    "value": "MobileNet",
+    "help": "Available Network Models",
+    "choices": "MobileNet, MobileNetv2,ResNet18, customcnn,RX_model_digit, regressioncnn, customLSTM, attire_model..."
+  },
+  "inp_dim": {
+    "value": [
+      128,
+      128,
+      3
+    ],
+    "help": "Input Dimension",
+    "choices": null
+  },
+  "load_prev_weights": {
+    "value":true,
+    "help": "Train from scratch/Continue training Mode",
+    "choices": "true, false"
+  },
+  "modelfilename": {
+    "value": "MobileNet.h5",
+    "help": "Name of h5 file",
+    "choices": null
+  },
+  "dbname": {
+    "value": "japanese_NPR_digit_class",
+    "help": "name of db",
+    "choices": "plate, gear"
+  },
+  "freeze": {
+    "value": false,
+    "help": "true for freezing , false for unfreezing",
+    "choices": "true,false"
+  },
+  "FC_LAYERS": {
+    "value": [
+      16
+    ],
+    "help": "list of fully connected layers, except last layer",
+    "choices": "null, [16],[16,32]"
+  },
+  "num_unfreeze": {
+    "value": 5,
+    "help": "number of layers to freeze",
+    "choices": "5,6,7"
+  },
+  "transfer_weights": {
+    "value": null,
+    "help": "Name of h5 file to copy from",
+    "choices": "null, model.h5, mobilenet.h5"
+  },
+  "show_plot": {
+    "value": false,
+    "help": "Enable/Disable training plot",
+    "choices": "true, false"
+  },
+  "class_mode": {
+    "value": "categorical",
+    "help": "Statistical Data Type",
+    "choices": "regression, categorical, binary"
+  },
+  "drop_outs": {
+    "value": [
+      0.1
+    ],
+    "help": "list of dropout layers, except last layer",
+    "choices": "null, [0.1],[0.1,0.1]"
+  },
+  "augment_type": {
+    "value": "sample_opencv_aug",
+    "help": "Type of Augmentation",
+    "choices": "simple_albumentaion, strong_albumentaion, sample_opencv_aug"
+  },
+  "verify_data": {
+    "value": false,
+    "help": "Enable/Disable imshow",
+    "choices": "true, false"
+  },
+  "batch_size": {
+    "value": 16,
+    "help": "Batch Size",
+    "choices": null
+  }
+}
