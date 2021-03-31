@@ -10,7 +10,7 @@ if __name__=="__main__":
 
 	if 1:
 		###### categorical experiment ###########
-		dbname= 'japanese_NPR_purpose_class'
+		dbname= 'japanese_NPR_digit_class'
 		
 		CNN_Classifier = getDeepNNClass('CNNCategorical')
 		if 1: # 0/1 training

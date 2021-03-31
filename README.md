@@ -41,12 +41,6 @@
 
 ## ```Step3:To Generate quantized models and testing```
     
-    Run `python tflite_areamodule.py`  - for generating NPR_area_class quantized weights
-
-    Run `python tflite_purposemodule.py`  - for generating NPR_purpose_class quantized weights
-
-    Run `python tflite_colormodule.py`  - for generating NPR_color_class quantized weights
-
     Run `python tflite_digitmodule.py`  - for generating NPR_digit_class quantized weights  
 
 
