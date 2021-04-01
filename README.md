@@ -56,9 +56,10 @@ Check quant_log.txt for Tflite and Quantization logs
 
 
 # E. ```Model Summary```
+
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
+Layer (type)                 Output Shape              Param #
+
 input_2 (InputLayer)         (None, 128, 128, 3)       0         
 _________________________________________________________________
 conv1_pad (ZeroPadding2D)    (None, 129, 129, 3)       0         
