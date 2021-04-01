@@ -43,5 +43,18 @@
     
     Run `python tflite_digitmodule.py`  - for generating NPR_digit_class quantized weights  
 
+# C. To view Results
+
+## ```Check train_log.txt for CNN results```
+
+## ```Check quant_log.txt for Quantized results```
+
+
+# D. To run sample testing with single image
+
+## ```Run sample_quant_prediction.py```
+
+
+
 
 

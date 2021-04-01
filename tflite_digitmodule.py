@@ -13,7 +13,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 test_path = "CNN_Classifier/DB/japanese_NPR_digit_class/val"
-
+preprocessing_function = preprocess_input
 img_width,img_height,ch = 128,128,3
 
 def representative_data_gen():
@@ -65,21 +65,25 @@ def acc_matrics(y_true, y_pred,labels):
     print('Val Acc: ', goodcount/len(y_true) * 100, '%\n\n')
 
 def pre_process(img):
-    img = cv2.resize(img, (img_width, img_height))
     if ch==1:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    #if not preprocessing_function is None and self.ch==3:
-    #img = preprocess_input(img)
-    #, interpolation=cv2.INTER_NEAREST
-    img = img.astype(np.float32)
-    img = img / 255.
+    img = cv2.resize(img, (img_width,img_height)) #, interpolation=cv2.INTER_NEAREST
+    if not preprocessing_function is None and ch==3:
+        img =  preprocessing_function(img)
+        img = img.astype(np.float32)
+    else:
+        img = img.astype(np.float32)
+        img = img / 255.
+        
+    if ch == 1:
+        img =np.expand_dims(img,axis=2)
     return img
-
 def test_models(test_path,tf_path,tflite_model_quant,tflite_path):
 
     interpreter = tf.lite.Interpreter(model_content=tflite_model_quant)
     interpreter.allocate_tensors()
     keras_model = load_model(tf_path)
+    keras_model.summary()
     tflite_y_true=[]
     tflite_y_pred=[]
     tf_y_true =[]
@@ -87,26 +91,7 @@ def test_models(test_path,tf_path,tflite_model_quant,tflite_path):
     tflitequantised_y_pred =[]
     tflitequantised_y_true = []
    
-    dataset_labels = [
-      "2",
-      "7",
-      "00",
-      "1",
-      "90",
-      "0",
-      "5",
-      "4",
-      "3",
-      "8",
-      "9",
-      "6",
-     "13",
-      "18",
-      "22",
-      "23",
-       "33",
-      "100"
-    ]
+    dataset_labels = ['2', '7', '00', '1', '90', '0', '5', '4', '3', '8', '9', '6', '13', '18', '22', '23', '33', '100']
 
     allfiles = glob.glob(osp.join(test_path, '*', '*'), recursive=True)
     for img in allfiles: 
@@ -119,7 +104,7 @@ def test_models(test_path,tf_path,tflite_model_quant,tflite_path):
         val_image2 = val_image2.astype(np.uint8)
         #val_image2 = np.expand_dims(val_image2, axis=0)
        
-        #TF Lite model
+        #TF Lite int8 model
       
         input_details = interpreter.get_input_details()
         output_details = interpreter.get_output_details()
@@ -158,8 +143,8 @@ def test_models(test_path,tf_path,tflite_model_quant,tflite_path):
 
     print("TFLite Model")
     acc_matrics(tflite_y_true,tflite_y_pred,dataset_labels)
-    #print("TF Model")
-    #acc_matrics(tf_y_true,tf_y_pred,dataset_labels)
+    print("TF Model")
+    acc_matrics(tf_y_true,tf_y_pred,dataset_labels)
     print("TFLite_Int8_quantized Model")
     acc_matrics(tflitequantised_y_true,tflitequantised_y_pred,dataset_labels)
 if __name__ == '__main__':
