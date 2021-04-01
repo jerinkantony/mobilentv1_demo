@@ -400,7 +400,7 @@ class DEEP_NN():
             with self.graph.as_default():
                 probs = self.model.predict(img1).tolist()[0]
         K.clear_session()
-        #print('probs: ', probs)
+        
         class_index = np.argmax(probs)
         label = self.classes[class_index]
         return class_index, label
@@ -427,7 +427,7 @@ class DEEP_NN():
         predictions, labels = self.batch_predict(bufferlist)
         return predictions, labels
         
-    def validate(self, folder = 'val',show_flag=True):
+    def validate(self, folder = 'val',show_flag=False):
         dir_ = osp.join(self.DB_path, folder)
         allfiles = glob.glob(osp.join(dir_, '*', '*'), recursive=True) #other exts TOTO
         good_count=0
@@ -439,12 +439,8 @@ class DEEP_NN():
                 class_index, predicted_label = self.Predict(img)
                 classname = os.path.split(f)[0].split('/')[-1]
                 
-                if show_flag:
-                    cv2.imshow('img',img)
-                    k=cv2.waitKey(1)
-                    if k==27:
-                        break
-                    print('Actual: ', classname, 'Predicted: ', predicted_label)
+                
+                print('Actual: ', classname, 'Predicted: ', predicted_label)
                     
                 y_pred.append(predicted_label)
                 y_true.append(classname)
@@ -452,7 +448,7 @@ class DEEP_NN():
                 if str(predicted_label)==str(classname):
                     good_count+=1
                 else:
-                    if 1:
+                    if 0:
                         cv2.imshow('img',img)
                         print('Actual: ', classname, 'Predicted: ', predicted_label)
                         print('Press enter, c to move image to confused folder, esc to quit')
@@ -468,7 +464,7 @@ class DEEP_NN():
             except:
                 print(f, 'not an image')
         acc_matrics(y_true, y_pred,self.classes)
-
+       
     def __del__(self):
         print('Destructor called')
 

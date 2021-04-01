@@ -1,0 +1,1198 @@
+Model: "model_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 128, 128, 3)]     0         
+_________________________________________________________________
+conv1_pad (ZeroPadding2D)    (None, 129, 129, 3)       0         
+_________________________________________________________________
+conv1 (Conv2D)               (None, 64, 64, 32)        864       
+_________________________________________________________________
+conv1_bn (BatchNormalization (None, 64, 64, 32)        128       
+_________________________________________________________________
+conv1_relu (ReLU)            (None, 64, 64, 32)        0         
+_________________________________________________________________
+conv_dw_1 (DepthwiseConv2D)  (None, 64, 64, 32)        288       
+_________________________________________________________________
+conv_dw_1_bn (BatchNormaliza (None, 64, 64, 32)        128       
+_________________________________________________________________
+conv_dw_1_relu (ReLU)        (None, 64, 64, 32)        0         
+_________________________________________________________________
+conv_pw_1 (Conv2D)           (None, 64, 64, 64)        2048      
+_________________________________________________________________
+conv_pw_1_bn (BatchNormaliza (None, 64, 64, 64)        256       
+_________________________________________________________________
+conv_pw_1_relu (ReLU)        (None, 64, 64, 64)        0         
+_________________________________________________________________
+conv_pad_2 (ZeroPadding2D)   (None, 65, 65, 64)        0         
+_________________________________________________________________
+conv_dw_2 (DepthwiseConv2D)  (None, 32, 32, 64)        576       
+_________________________________________________________________
+conv_dw_2_bn (BatchNormaliza (None, 32, 32, 64)        256       
+_________________________________________________________________
+conv_dw_2_relu (ReLU)        (None, 32, 32, 64)        0         
+_________________________________________________________________
+conv_pw_2 (Conv2D)           (None, 32, 32, 128)       8192      
+_________________________________________________________________
+conv_pw_2_bn (BatchNormaliza (None, 32, 32, 128)       512       
+_________________________________________________________________
+conv_pw_2_relu (ReLU)        (None, 32, 32, 128)       0         
+_________________________________________________________________
+conv_dw_3 (DepthwiseConv2D)  (None, 32, 32, 128)       1152      
+_________________________________________________________________
+conv_dw_3_bn (BatchNormaliza (None, 32, 32, 128)       512       
+_________________________________________________________________
+conv_dw_3_relu (ReLU)        (None, 32, 32, 128)       0         
+_________________________________________________________________
+conv_pw_3 (Conv2D)           (None, 32, 32, 128)       16384     
+_________________________________________________________________
+conv_pw_3_bn (BatchNormaliza (None, 32, 32, 128)       512       
+_________________________________________________________________
+conv_pw_3_relu (ReLU)        (None, 32, 32, 128)       0         
+_________________________________________________________________
+conv_pad_4 (ZeroPadding2D)   (None, 33, 33, 128)       0         
+_________________________________________________________________
+conv_dw_4 (DepthwiseConv2D)  (None, 16, 16, 128)       1152      
+_________________________________________________________________
+conv_dw_4_bn (BatchNormaliza (None, 16, 16, 128)       512       
+_________________________________________________________________
+conv_dw_4_relu (ReLU)        (None, 16, 16, 128)       0         
+_________________________________________________________________
+conv_pw_4 (Conv2D)           (None, 16, 16, 256)       32768     
+_________________________________________________________________
+conv_pw_4_bn (BatchNormaliza (None, 16, 16, 256)       1024      
+_________________________________________________________________
+conv_pw_4_relu (ReLU)        (None, 16, 16, 256)       0         
+_________________________________________________________________
+conv_dw_5 (DepthwiseConv2D)  (None, 16, 16, 256)       2304      
+_________________________________________________________________
+conv_dw_5_bn (BatchNormaliza (None, 16, 16, 256)       1024      
+_________________________________________________________________
+conv_dw_5_relu (ReLU)        (None, 16, 16, 256)       0         
+_________________________________________________________________
+conv_pw_5 (Conv2D)           (None, 16, 16, 256)       65536     
+_________________________________________________________________
+conv_pw_5_bn (BatchNormaliza (None, 16, 16, 256)       1024      
+_________________________________________________________________
+conv_pw_5_relu (ReLU)        (None, 16, 16, 256)       0         
+_________________________________________________________________
+conv_pad_6 (ZeroPadding2D)   (None, 17, 17, 256)       0         
+_________________________________________________________________
+conv_dw_6 (DepthwiseConv2D)  (None, 8, 8, 256)         2304      
+_________________________________________________________________
+conv_dw_6_bn (BatchNormaliza (None, 8, 8, 256)         1024      
+_________________________________________________________________
+conv_dw_6_relu (ReLU)        (None, 8, 8, 256)         0         
+_________________________________________________________________
+conv_pw_6 (Conv2D)           (None, 8, 8, 512)         131072    
+_________________________________________________________________
+conv_pw_6_bn (BatchNormaliza (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_pw_6_relu (ReLU)        (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_dw_7 (DepthwiseConv2D)  (None, 8, 8, 512)         4608      
+_________________________________________________________________
+conv_dw_7_bn (BatchNormaliza (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_dw_7_relu (ReLU)        (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_pw_7 (Conv2D)           (None, 8, 8, 512)         262144    
+_________________________________________________________________
+conv_pw_7_bn (BatchNormaliza (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_pw_7_relu (ReLU)        (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_dw_8 (DepthwiseConv2D)  (None, 8, 8, 512)         4608      
+_________________________________________________________________
+conv_dw_8_bn (BatchNormaliza (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_dw_8_relu (ReLU)        (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_pw_8 (Conv2D)           (None, 8, 8, 512)         262144    
+_________________________________________________________________
+conv_pw_8_bn (BatchNormaliza (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_pw_8_relu (ReLU)        (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_dw_9 (DepthwiseConv2D)  (None, 8, 8, 512)         4608      
+_________________________________________________________________
+conv_dw_9_bn (BatchNormaliza (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_dw_9_relu (ReLU)        (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_pw_9 (Conv2D)           (None, 8, 8, 512)         262144    
+_________________________________________________________________
+conv_pw_9_bn (BatchNormaliza (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_pw_9_relu (ReLU)        (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_dw_10 (DepthwiseConv2D) (None, 8, 8, 512)         4608      
+_________________________________________________________________
+conv_dw_10_bn (BatchNormaliz (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_dw_10_relu (ReLU)       (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_pw_10 (Conv2D)          (None, 8, 8, 512)         262144    
+_________________________________________________________________
+conv_pw_10_bn (BatchNormaliz (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_pw_10_relu (ReLU)       (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_dw_11 (DepthwiseConv2D) (None, 8, 8, 512)         4608      
+_________________________________________________________________
+conv_dw_11_bn (BatchNormaliz (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_dw_11_relu (ReLU)       (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_pw_11 (Conv2D)          (None, 8, 8, 512)         262144    
+_________________________________________________________________
+conv_pw_11_bn (BatchNormaliz (None, 8, 8, 512)         2048      
+_________________________________________________________________
+conv_pw_11_relu (ReLU)       (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv_pad_12 (ZeroPadding2D)  (None, 9, 9, 512)         0         
+_________________________________________________________________
+conv_dw_12 (DepthwiseConv2D) (None, 4, 4, 512)         4608      
+_________________________________________________________________
+conv_dw_12_bn (BatchNormaliz (None, 4, 4, 512)         2048      
+_________________________________________________________________
+conv_dw_12_relu (ReLU)       (None, 4, 4, 512)         0         
+_________________________________________________________________
+conv_pw_12 (Conv2D)          (None, 4, 4, 1024)        524288    
+_________________________________________________________________
+conv_pw_12_bn (BatchNormaliz (None, 4, 4, 1024)        4096      
+_________________________________________________________________
+conv_pw_12_relu (ReLU)       (None, 4, 4, 1024)        0         
+_________________________________________________________________
+conv_dw_13 (DepthwiseConv2D) (None, 4, 4, 1024)        9216      
+_________________________________________________________________
+conv_dw_13_bn (BatchNormaliz (None, 4, 4, 1024)        4096      
+_________________________________________________________________
+conv_dw_13_relu (ReLU)       (None, 4, 4, 1024)        0         
+_________________________________________________________________
+conv_pw_13 (Conv2D)          (None, 4, 4, 1024)        1048576   
+_________________________________________________________________
+conv_pw_13_bn (BatchNormaliz (None, 4, 4, 1024)        4096      
+_________________________________________________________________
+conv_pw_13_relu (ReLU)       (None, 4, 4, 1024)        0         
+_________________________________________________________________
+global_average_pooling2d_1 ( (None, 1024)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 16)                16400     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 16)                0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 18)                306       
+=================================================================
+Total params: 3,245,570
+Trainable params: 3,223,682
+Non-trainable params: 21,888
+_________________________________________________________________
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00021.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00001.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan69_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00003.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00013.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00014.png
+TFLite Quantised : Actual:  0 Predicted:  9
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00019.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00011.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan68_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00009.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00002.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan130_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00020.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan72_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan6_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00017.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00022.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00015.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00008.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00005.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00007.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00018.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan85_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan131_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00010.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan70_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00006.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00012.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00004.png
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan129_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan86_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan71_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/img001-00016.png
+TFLite Quantised : Actual:  0 Predicted:  9
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan73_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/0/japan99_0.jpg
+TFLite Quantised : Actual:  0 Predicted:  0
+TFLite : Actual:  0 Predicted:  0
+TF : Actual:  0 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan86_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan130_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00005.png
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00010.png
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan81_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00009.png
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan101_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00011.png
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00008.png
+TFLite Quantised : Actual:  5 Predicted:  1
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00006.png
+TFLite Quantised : Actual:  5 Predicted:  3
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/0827-093115.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/0827-093323.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan83_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  3
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00004.png
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan80_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00002.png
+TFLite Quantised : Actual:  5 Predicted:  3
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan78_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00001.png
+TFLite Quantised : Actual:  5 Predicted:  3
+TFLite : Actual:  5 Predicted:  9
+TF : Actual:  5 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan131_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00003.png
+TFLite Quantised : Actual:  5 Predicted:  3
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/japan96_5.jpg
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00012.png
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/5/img006-00007.png
+TFLite Quantised : Actual:  5 Predicted:  5
+TFLite : Actual:  5 Predicted:  5
+TF : Actual:  5 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/japan85_4.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/japan101_4.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00002.png
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/0826-182421.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/japan129_4.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00008.png
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00005.png
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/japan130_4.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00004.png
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00007.png
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/japan99_4.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/0827-093333.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00001.png
+TFLite Quantised : Actual:  4 Predicted:  7
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/japan95_4.jpg
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00003.png
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/4/img005-00006.png
+TFLite Quantised : Actual:  4 Predicted:  4
+TFLite : Actual:  4 Predicted:  4
+TF : Actual:  4 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/33/0814-170009.jpg
+TFLite Quantised : Actual:  33 Predicted:  13
+TFLite : Actual:  33 Predicted:  13
+TF : Actual:  33 Predicted:  13
+CNN_Classifier/DB/japanese_NPR_digit_class/val/100/0814-171530.jpg
+TFLite Quantised : Actual:  100 Predicted:  100
+TFLite : Actual:  100 Predicted:  100
+TF : Actual:  100 Predicted:  100
+CNN_Classifier/DB/japanese_NPR_digit_class/val/100/0814-172203.jpg
+TFLite Quantised : Actual:  100 Predicted:  100
+TFLite : Actual:  100 Predicted:  100
+TF : Actual:  100 Predicted:  100
+CNN_Classifier/DB/japanese_NPR_digit_class/val/13/0814-163840.jpg
+TFLite Quantised : Actual:  13 Predicted:  13
+TFLite : Actual:  13 Predicted:  13
+TF : Actual:  13 Predicted:  13
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/japan95_7.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/japan79_7.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00001.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00003.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/0814-154654.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00004.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/japan69_7.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/0826-180944.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/japan3_7.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/japan74_7.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00002.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00009.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/japan131_7.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/japan70_7.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00007.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00006.png
+TFLite Quantised : Actual:  7 Predicted:  1
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00005.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/0814-172212.jpg
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/7/img008-00008.png
+TFLite Quantised : Actual:  7 Predicted:  7
+TFLite : Actual:  7 Predicted:  7
+TF : Actual:  7 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/japan129_8.jpg
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/japan103_8.jpg
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/japan96_8.jpg
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/img009-00006.png
+TFLite Quantised : Actual:  8 Predicted:  3
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/img009-00007.png
+TFLite Quantised : Actual:  8 Predicted:  3
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/japan130_8.jpg
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/img009-00001.png
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/japan99_8.jpg
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/img009-00002.png
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/img009-00003.png
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/img009-00005.png
+TFLite Quantised : Actual:  8 Predicted:  3
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/img009-00004.png
+TFLite Quantised : Actual:  8 Predicted:  6
+TFLite : Actual:  8 Predicted:  6
+TF : Actual:  8 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/japan131_8.jpg
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/8/japan95_8.jpg
+TFLite Quantised : Actual:  8 Predicted:  8
+TFLite : Actual:  8 Predicted:  8
+TF : Actual:  8 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00012.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan30_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00007.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan129_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan86_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan131_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  0
+TF : Actual:  1 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00002.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00015.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan72_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  7
+TFLite : Actual:  1 Predicted:  4
+TF : Actual:  1 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan99_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00006.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan24_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  0
+TFLite : Actual:  1 Predicted:  0
+TF : Actual:  1 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00004.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00017.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00016.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00014.png
+TFLite Quantised : Actual:  1 Predicted:  7
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan78_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  0
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00011.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00010.png
+TFLite Quantised : Actual:  1 Predicted:  0
+TFLite : Actual:  1 Predicted:  0
+TF : Actual:  1 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan101_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  0
+TF : Actual:  1 Predicted:  0
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/japan68_1.jpg
+TFLite Quantised : Actual:  1 Predicted:  4
+TFLite : Actual:  1 Predicted:  4
+TF : Actual:  1 Predicted:  4
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00005.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00013.png
+TFLite Quantised : Actual:  1 Predicted:  7
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/1/img002-00008.png
+TFLite Quantised : Actual:  1 Predicted:  1
+TFLite : Actual:  1 Predicted:  1
+TF : Actual:  1 Predicted:  1
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00002.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00012.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00005.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00011.png
+TFLite Quantised : Actual:  2 Predicted:  7
+TFLite : Actual:  2 Predicted:  3
+TF : Actual:  2 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan91_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan71_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00006.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00007.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00014.png
+TFLite Quantised : Actual:  2 Predicted:  8
+TFLite : Actual:  2 Predicted:  8
+TF : Actual:  2 Predicted:  8
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00003.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan99_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan70_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00009.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00015.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan9_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00010.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan85_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan69_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00013.png
+TFLite Quantised : Actual:  2 Predicted:  7
+TFLite : Actual:  2 Predicted:  7
+TF : Actual:  2 Predicted:  7
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00004.png
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/japan73_2.jpg
+TFLite Quantised : Actual:  2 Predicted:  2
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/2/img003-00008.png
+TFLite Quantised : Actual:  2 Predicted:  9
+TFLite : Actual:  2 Predicted:  2
+TF : Actual:  2 Predicted:  2
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00005.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan130_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan81_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00003.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan72_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00008.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00002.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00001.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan129_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00006.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan103_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan83_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan80_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan95_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan94_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00004.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00009.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/japan74_3.jpg
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00007.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/3/img004-00010.png
+TFLite Quantised : Actual:  3 Predicted:  3
+TFLite : Actual:  3 Predicted:  3
+TF : Actual:  3 Predicted:  3
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/japan101_6.jpg
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00002.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00006.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00008.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00007.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00004.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00005.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/japan129_6.jpg
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00003.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00013.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00012.png
+TFLite Quantised : Actual:  6 Predicted:  3
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/japan130_6.jpg
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/0827-093112.jpg
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/japan103_6.jpg
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00009.png
+TFLite Quantised : Actual:  6 Predicted:  5
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00011.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  5
+TF : Actual:  6 Predicted:  5
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/japan86_6.jpg
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00010.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/japan96_6.jpg
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/6/img007-00001.png
+TFLite Quantised : Actual:  6 Predicted:  6
+TFLite : Actual:  6 Predicted:  6
+TF : Actual:  6 Predicted:  6
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan99_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan91_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan79_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/img010-00002.png
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/img010-00006.png
+TFLite Quantised : Actual:  9 Predicted:  3
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan86_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/img010-00004.png
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan85_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan73_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/img010-00007.png
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/img010-00001.png
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan103_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/img010-00005.png
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/japan81_9.jpg
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/9/img010-00003.png
+TFLite Quantised : Actual:  9 Predicted:  9
+TFLite : Actual:  9 Predicted:  9
+TF : Actual:  9 Predicted:  9
+CNN_Classifier/DB/japanese_NPR_digit_class/val/90/0619-1213424.jpg
+TFLite Quantised : Actual:  90 Predicted:  90
+TFLite : Actual:  90 Predicted:  90
+TF : Actual:  90 Predicted:  90
+CNN_Classifier/DB/japanese_NPR_digit_class/val/00/0623-202309.jpg
+TFLite Quantised : Actual:  00 Predicted:  00
+TFLite : Actual:  00 Predicted:  00
+TF : Actual:  00 Predicted:  00
+CNN_Classifier/DB/japanese_NPR_digit_class/val/22/0713-175144.jpg
+TFLite Quantised : Actual:  22 Predicted:  22
+TFLite : Actual:  22 Predicted:  22
+TF : Actual:  22 Predicted:  22
+CNN_Classifier/DB/japanese_NPR_digit_class/val/18/0814-163650.jpg
+TFLite Quantised : Actual:  18 Predicted:  8
+TFLite : Actual:  18 Predicted:  18
+TF : Actual:  18 Predicted:  18
+TFLite Model
+Confusion matrix:
+ [[19  1  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0  0]
+ [ 0 19  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0 18  0  4  0  2  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0 35  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0 22  0  0  0  1  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0 16  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0 13  0  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0 15  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  1  0  0  0  0 19  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2]]
+Report :
+               precision    recall  f1-score   support
+
+           0       0.90      1.00      0.95        35
+          00       1.00      1.00      1.00         1
+           1       1.00      0.75      0.86        24
+         100       1.00      1.00      1.00         2
+          13       0.50      1.00      0.67         1
+          18       1.00      1.00      1.00         1
+           2       1.00      0.86      0.93        22
+          22       1.00      1.00      1.00         1
+           3       0.95      1.00      0.98        20
+          33       0.00      0.00      0.00         1
+           4       0.89      1.00      0.94        16
+           5       0.96      0.96      0.96        23
+           6       0.95      0.95      0.95        20
+           7       0.95      1.00      0.97        19
+           8       0.93      0.93      0.93        14
+           9       0.94      1.00      0.97        15
+          90       1.00      1.00      1.00         1
+
+    accuracy                           0.94       216
+   macro avg       0.88      0.91      0.89       216
+weighted avg       0.94      0.94      0.94       216
+
+Val Acc:  93.98148148148148 %
+
+
+TF Model
+Confusion matrix:
+ [[19  1  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0  0]
+ [ 0 19  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0 18  0  4  0  2  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0 35  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0 22  0  0  0  1  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0 16  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0 13  0  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0 15  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  1  0  0  0  0 19  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2]]
+Report :
+               precision    recall  f1-score   support
+
+           0       0.90      1.00      0.95        35
+          00       1.00      1.00      1.00         1
+           1       1.00      0.75      0.86        24
+         100       1.00      1.00      1.00         2
+          13       0.50      1.00      0.67         1
+          18       1.00      1.00      1.00         1
+           2       1.00      0.86      0.93        22
+          22       1.00      1.00      1.00         1
+           3       0.95      1.00      0.98        20
+          33       0.00      0.00      0.00         1
+           4       0.89      1.00      0.94        16
+           5       0.96      0.96      0.96        23
+           6       0.95      0.95      0.95        20
+           7       0.95      1.00      0.97        19
+           8       0.93      0.93      0.93        14
+           9       0.94      1.00      0.97        15
+          90       1.00      1.00      1.00         1
+
+    accuracy                           0.94       216
+   macro avg       0.88      0.91      0.89       216
+weighted avg       0.94      0.94      0.94       216
+
+Val Acc:  93.98148148148148 %
+
+
+TFLite_Int8_quantized Model
+Confusion matrix:
+ [[18  2  0  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0]
+ [ 0 18  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  3  0 17  0  3  0  1  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0 33  0  0  0  0  2  0  0  0  0  0  0  0]
+ [ 0  0  0  1  0  0 17  0  5  0  0  0  0  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0 15  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  3 10  0  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  1  0 14  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  1  0  1  0  0 18  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2]]
+Report :
+               precision    recall  f1-score   support
+
+           0       0.92      0.94      0.93        35
+          00       1.00      1.00      1.00         1
+           1       0.89      0.71      0.79        24
+         100       1.00      1.00      1.00         2
+          13       0.50      1.00      0.67         1
+          18       0.00      0.00      0.00         1
+           2       1.00      0.82      0.90        22
+          22       1.00      1.00      1.00         1
+           3       0.67      1.00      0.80        20
+          33       0.00      0.00      0.00         1
+           4       0.94      0.94      0.94        16
+           5       0.94      0.74      0.83        23
+           6       0.95      0.90      0.92        20
+           7       0.75      0.95      0.84        19
+           8       0.83      0.71      0.77        14
+           9       0.82      0.93      0.87        15
+          90       1.00      1.00      1.00         1
+
+    accuracy                           0.86       216
+   macro avg       0.78      0.80      0.78       216
+weighted avg       0.87      0.86      0.86       216
+
+Val Acc:  86.11111111111111 %
+
+
