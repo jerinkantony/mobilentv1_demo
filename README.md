@@ -19,40 +19,40 @@
 
 ## ```Step3:Train and Validate```
 
-    python cnn_demo.py 
+    ```python cnn_demo.py```
 
 
 # B. Quantization
 
 ## ```Step1:Create Virtual enviornment and activate```
 
-    cd ../
+    ```cd ../
 
     deactivate(deactivate training enviornment)
 
     virtualenv venv_quant --python=python3
 
-    source venv_quant/bin/activate
+    source venv_quant/bin/activate```
 
 
 ## ```Step2:Install Requirements```
 
-    pip install -r requirements.txt
+    ```pip install -r requirements.txt```
 
-## ```Step3:To Generate quantized models and testing```
+##  ```Step3:To Generate quantized models and testing```
     
-    Run `python tflite_digitmodule.py`  - for generating NPR_digit_class quantized weights  
+    ```python tflite_digitmodule.py```  - for generating NPR_digit_class quantized weights  
 
 # C. To view Results
 
-Check train_log.txt for CNN results
+Check train_log.txt for training logs
 
-Check quant_log.txt for Quantized results
+Check quant_log.txt for Tflite and Quantization logs
 
 
 # D. To run sample testing with single image
 
-## ```Run sample_quant_prediction.py```
+```python sample_quant_prediction.py```
 
 
 
