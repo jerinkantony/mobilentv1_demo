@@ -1,6 +1,6 @@
-# mobilentv1_demo
+# ```mobilentv1_demo```
 
-```git clone https://github.com/jerinkantony/mobilentv1_demo --depth=1```
+ git clone https://github.com/jerinkantony/mobilentv1_demo --depth=1
 
 # A. Training
 
@@ -19,40 +19,40 @@
 
 ## ```Step3:Train and Validate```
 
-    ```python cnn_demo.py```
+    python cnn_demo.py
 
 
 # B. Quantization
 
 ## ```Step1:Create Virtual enviornment and activate```
 
-    ```cd ../
+    cd ../
 
     deactivate(deactivate training enviornment)
 
     virtualenv venv_quant --python=python3
 
-    source venv_quant/bin/activate```
+    source venv_quant/bin/activate
 
 
 ## ```Step2:Install Requirements```
 
-    ```pip install -r requirements.txt```
+    pip install -r requirements.txt
 
 ##  ```Step3:To Generate quantized models and testing```
     
-    ```python tflite_digitmodule.py```  - for generating NPR_digit_class quantized weights  
+    python tflite_digitmodule.py  - for generating NPR_digit_class quantized weights  
 
-# C. To view Results
+# C. ```To view Results```
 
 Check train_log.txt for training logs
 
 Check quant_log.txt for Tflite and Quantization logs
 
 
-# D. To run sample testing with single image
+# D. ```To run sample testing with single image```
 
-```python sample_quant_prediction.py```
+ python sample_quant_prediction.py
 
 
 
