@@ -45,9 +45,9 @@
 
 # C. To view Results
 
-## ```Check train_log.txt for CNN results```
+Check train_log.txt for CNN results
 
-## ```Check quant_log.txt for Quantized results```
+Check quant_log.txt for Quantized results
 
 
 # D. To run sample testing with single image
